@@ -1,0 +1,24 @@
+{
+  "manifest_version": 3,
+  "name": "NemTube Recolor",
+  "version": "1.0",
+  "description": "Substitui o vermelho por outra cor no NemTube.",
+  "permissions": ["storage", "activeTab", "scripting"],
+  "host_permissions": [
+    "https://nemtube.nemtudo.me/*"
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon.png"
+    }
+  },
+  "content_scripts": [
+    {
+      "matches": ["https://nemtube.nemtudo.me/*"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ]
+}
+

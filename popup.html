@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Fonte mais moderna */
+      padding: 20px; /* Aumenta o padding para mais espaço */
+      background-color: #f4f7f6; /* Cor de fundo suave */
+      color: #333; /* Cor do texto principal */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Centraliza o conteúdo horizontalmente */
+      min-width: 300px; /* Largura mínima para o popup */
+    }
+
+    h3 {
+      color: #2c3e50; /* Cor mais escura para os títulos */
+      margin-bottom: 15px;
+      text-align: center;
+    }
+
+    hr {
+      border: 0;
+      height: 1px;
+      background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0));
+      margin: 25px 0; /* Mais espaço em volta da linha divisória */
+      width: 80%; /* Linha menor e centralizada */
+    }
+
+    /* Estilo para a seção de escolha de cor */
+    .option-section { /* Nome da classe mais genérico */
+      background-color: #ffffff; /* Fundo branco para as seções */
+      border-radius: 8px; /* Cantos arredondados */
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08); /* Sombra suave */
+      padding: 20px;
+      margin-bottom: 20px;
+      width: 90%; /* Ocupa a maior parte da largura */
+      text-align: center;
+    }
+
+    input[type="color"] {
+      -webkit-appearance: none;
+      -moz-appearance: none;
+      appearance: none;
+      width: 80px; /* Tamanho do seletor de cor */
+      height: 80px;
+      border: none;
+      border-radius: 50%; /* Faz o seletor de cor circular */
+      cursor: pointer;
+      background-color: transparent; /* Remove o fundo padrão */
+      margin-right: 15px; /* Espaço entre o seletor e o botão */
+      vertical-align: middle; /* Alinha verticalmente */
+    }
+
+    input[type="color"]::-webkit-color-swatch-wrapper {
+      padding: 0;
+    }
+
+    input[type="color"]::-webkit-color-swatch {
+      border: none;
+      border-radius: 50%;
+    }
+
+    /* Estilo para o modo claro */
+    .option-section label {
+      display: flex; /* Para alinhar o checkbox e o texto */
+      align-items: center;
+      justify-content: center; /* Centraliza o conteúdo da label */
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    input[type="checkbox"] {
+      margin-right: 10px;
+      transform: scale(1.2); /* Aumenta o tamanho do checkbox */
+      cursor: pointer;
+    }
+
+    .apply-button-container {
+        width: 90%; /* Mesma largura das seções de opções */
+        text-align: center;
+        margin-top: 10px; /* Espaço acima do botão */
+    }
+
+    button {
+      background-color: #3498db; /* Cor de botão primária */
+      color: white;
+      border: none;
+      padding: 12px 25px; /* Aumenta um pouco o padding do botão */
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 17px; /* Aumenta o tamanho da fonte do botão */
+      transition: background-color 0.3s ease; /* Transição suave ao hover */
+      font-weight: bold; /* Deixa o texto do botão em negrito */
+    }
+
+    button:hover {
+      background-color: #2980b9; /* Cor mais escura ao passar o mouse */
+    }
+  </style>
+</head>
+<body>
+  <div class="option-section">
+    <h3>Escolha a nova cor:</h3>
+    <div>
+      <input type="color" id="colorPicker" />
+    </div>
+  </div>
+
+  <hr>
+
+  <div class="option-section">
+    <h3>Modo Claro:</h3>
+    <label>
+      <input type="checkbox" id="lightModeToggle" />
+      Ativar modo claro
+    </label>
+  </div>
+
+  <div class="apply-button-container">
+    <button id="saveBtn">Aplicar</button>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
